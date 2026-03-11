@@ -1,8 +1,10 @@
 using UnityEngine;
+using System.Collections.Generic;
 
-public class Drone : MonoBehaviour, IDamageable,IVisitable
+public class Drone : MonoBehaviour,IEnemy , IDamageable, IVisitable
 {
     private HealthSystem hs;
+    public HealthSystem Hs => hs;
 
     [Header("Health")]
     [SerializeField] private float maxHealth = 3f;
@@ -10,6 +12,7 @@ public class Drone : MonoBehaviour, IDamageable,IVisitable
 
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float stopDistance = 2f;
     private Transform player;
     private Rigidbody2D rb;
     private Movement mv;
@@ -18,7 +21,8 @@ public class Drone : MonoBehaviour, IDamageable,IVisitable
     [SerializeField] private Bullet bulletPrefab;
     [SerializeField] private Transform firePoint;
     [SerializeField] private float fireRadius = 1f;
-    [SerializeField] private float shootCooldown = 1f;
+    [SerializeField] private float minShootCooldown = 0.8f;
+    [SerializeField] private float maxShootCooldown = 1.2f;
     [SerializeField] private float bulletSpeed = 6f;
     [SerializeField] private float bulletDamage = 1f;
 
@@ -29,16 +33,26 @@ public class Drone : MonoBehaviour, IDamageable,IVisitable
         get => bulletDamage;
         set => bulletDamage = value;
     }
-    public float MoveSpeed
-    {
-        get => moveSpeed;
-        set => moveSpeed = value;
-    }
     public float MaxHealth
     {
         get => maxHealth;
-        set => maxHealth = value;
+        set
+        {
+            float previous = maxHealth;
+            maxHealth = value;
+
+            if (hs != null && value > previous)
+            {
+                hs.IncreaseMaxHealth(value - previous);
+            }
+        }
     }
+    public Movement Mv => mv;
+    public float CurrentHealth => hs != null ? hs.CurrentHP : maxHealth;
+    public float MovementSpeed => mv != null ? mv.Speed : moveSpeed;
+    public IReadOnlyList<string> Upgrades => upgrades;
+
+    private readonly List<string> upgrades = new();
 
     private void Awake()
     {
@@ -66,17 +80,28 @@ public class Drone : MonoBehaviour, IDamageable,IVisitable
     private void Start()
     {
         isDead = false;
-        shootTimer = shootCooldown;
+        shootTimer = Random.Range(minShootCooldown, maxShootCooldown);
     }
 
     private void Update()
     {
         if (isDead) return;
+
+        TryFindPlayer();
         if (player == null) return;
 
         Move();
         AimFirePoint();
         Shoot();
+    }
+
+    void TryFindPlayer()
+    {
+        if (player != null) return;
+
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        if (p != null)
+        player = p.transform;
     }
 
     public void Accept(IVisitor visitor)
@@ -86,7 +111,16 @@ public class Drone : MonoBehaviour, IDamageable,IVisitable
 
     private void Move()
     {
-        Vector2 dir = ((Vector2)player.position - rb.position).normalized;
+        Vector2 toPlayer = (Vector2)player.position - rb.position;
+        float distance = toPlayer.magnitude;
+
+        if (distance <= stopDistance)
+        {
+            mv.Stop();
+            return;
+        }
+
+        Vector2 dir = toPlayer.normalized;
         mv.Move(dir);
     }
 
@@ -107,12 +141,13 @@ public class Drone : MonoBehaviour, IDamageable,IVisitable
         if (shootTimer > 0f)
             return;
 
-        shootTimer = shootCooldown;
+        shootTimer = Random.Range(minShootCooldown, maxShootCooldown);
 
         Vector2 dir = ((Vector2)player.position - (Vector2)firePoint.position).normalized;
 
         Bullet bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         bullet.Initialize(dir, bulletSpeed, bulletDamage);
+        CharacterAudio.instance.PlayShotSound();
     }
 
     public void TakeDamage(float damage)
@@ -125,6 +160,13 @@ public class Drone : MonoBehaviour, IDamageable,IVisitable
     {
         isDead = true;
         mv.Stop();
+        CharacterAudio.instance.PlayDieSound();
         Destroy(gameObject);
+    }
+
+    public void RecordUpgrade(string upgradeText)
+    {
+        if (string.IsNullOrWhiteSpace(upgradeText)) return;
+        upgrades.Add(upgradeText);
     }
 }

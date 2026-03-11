@@ -12,20 +12,25 @@ public class BoostHealthVisitor : IVisitor
     public void Visit(Player player)
     {
         player.MaxHealth += bonusHealth;
+        player.RecordUpgrade($"Health +{bonusHealth:0.##}");
 
         Debug.Log($"Player MaxHealth +{bonusHealth}");
     }
 
     public void Visit(Drone drone)
     {
-        drone.MaxHealth += bonusHealth * 0.5f;
+        float value = bonusHealth * 0.5f;
+        drone.MaxHealth += value;
+        drone.RecordUpgrade($"Health +{value:0.##}");
 
         Debug.Log("Drone health boosted");
     }
 
     public void Visit(Turret turret)
     {
-        turret.MaxHealth += bonusHealth * 1.5f;
+        float value = bonusHealth * 1.5f;
+        turret.MaxHealth += value;
+        turret.RecordUpgrade($"Health +{value:0.##}");
 
         Debug.Log("Turret health boosted");
     }

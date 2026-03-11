@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class HealthSystem
 {
-    public float MaxHP { get; }
+    public float MaxHP { get; private set; }
     public float CurrentHP { get; private set; }
     public bool IsDead => CurrentHP <= 0;
 
@@ -36,6 +36,22 @@ public class HealthSystem
 
         CurrentHP += amount;
         CurrentHP = Mathf.Min(CurrentHP, MaxHP);
+        OnHealthChanged?.Invoke(CurrentHP);
+    }
+
+    public void IncreaseMaxHealth(float amount, bool healBonus = true)
+    {
+        if (amount <= 0f) return;
+
+        MaxHP += amount;
+
+        if (healBonus)
+        {
+            CurrentHP += amount;
+        }
+
+        CurrentHP = Mathf.Min(CurrentHP, MaxHP);
+        OnHealthChanged?.Invoke(CurrentHP);
     }
 
     public void Kill()
@@ -43,6 +59,7 @@ public class HealthSystem
         if (IsDead) return;
 
         CurrentHP = 0;
+        OnHealthChanged?.Invoke(CurrentHP);
         OnDied?.Invoke();
     }
 }

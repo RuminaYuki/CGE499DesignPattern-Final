@@ -1,18 +1,8 @@
 using UnityEngine;
 
-public class RoundSystem : MonoBehaviour
+public class ApplyPowerUp : MonoBehaviour
 {
-    private void Start()
-    {
-        StartRound();
-    }
-
-    public void StartRound()
-    {
-        ApplyRandomPowerUpToEveryone();
-    }
-
-    private void ApplyRandomPowerUpToEveryone()
+    public void ApplyRandomPowerUpToEveryone()
     {
         MonoBehaviour[] allObjects = FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None);
 
@@ -35,16 +25,16 @@ public class RoundSystem : MonoBehaviour
         switch (r)
         {
             case 0:
-                return new BoostDamageVisitor(1f);
+                return new BoostDamageVisitor(3f);
 
             case 1:
-                return new BoostSpeedVisitor(1f);
+                return new BoostSpeedVisitor(5f);
 
             case 2:
-                return new BoostHealthVisitor(2f);
+                return new BoostHealthVisitor(5f);
 
             default:
-                return new BoostDamageVisitor(1f);
+                return new BoostDamageVisitor(3f);
         }
     }
 }

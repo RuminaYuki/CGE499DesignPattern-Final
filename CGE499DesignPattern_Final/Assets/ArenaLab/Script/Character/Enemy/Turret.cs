@@ -1,8 +1,10 @@
 using UnityEngine;
+using System.Collections.Generic;
 
-public class Turret : MonoBehaviour, IDamageable, IVisitable
+public class Turret : MonoBehaviour,IEnemy, IDamageable, IVisitable
 {
     private HealthSystem hs;
+    public HealthSystem Hs => hs;
 
     [Header("Health")]
     [SerializeField] private float maxHealth = 3f;
@@ -15,6 +17,7 @@ public class Turret : MonoBehaviour, IDamageable, IVisitable
     [Header("Shoot")]
     [SerializeField] private Bullet bulletPrefab;
     [SerializeField] private Transform firePoint;
+    [SerializeField] private float fireRadius = 1f;
     [SerializeField] private float fireRate = 1f;
     [SerializeField] private float bulletSpeed = 8f;
     [SerializeField] private float bulletDamage = 1f;
@@ -35,8 +38,22 @@ public class Turret : MonoBehaviour, IDamageable, IVisitable
     public float MaxHealth
     {
         get => maxHealth;
-        set => maxHealth = value;
+        set
+        {
+            float previous = maxHealth;
+            maxHealth = value;
+
+            if (hs != null && value > previous)
+            {
+                hs.IncreaseMaxHealth(value - previous);
+            }
+        }
     }
+    public float CurrentHealth => hs != null ? hs.CurrentHP : maxHealth;
+    public float MovementSpeed => 0f;
+    public IReadOnlyList<string> Upgrades => upgrades;
+
+    private readonly List<string> upgrades = new();
 
     void Awake()
     {
@@ -66,10 +83,21 @@ public class Turret : MonoBehaviour, IDamageable, IVisitable
     void Update()
     {
         if (isDead) return;
+        
+        TryFindPlayer();
         if (player == null) return;
 
         DetectPlayer();
     }
+
+    void TryFindPlayer()
+{
+    if (player != null) return;
+
+    GameObject p = GameObject.FindGameObjectWithTag("Player");
+    if (p != null)
+        player = p.transform;
+}
 
     public void Accept(IVisitor visitor)
     {
@@ -97,8 +125,9 @@ public class Turret : MonoBehaviour, IDamageable, IVisitable
     {
         Vector2 dir = (player.position - firePoint.position).normalized;
 
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        firePoint.localPosition = dir * fireRadius;
 
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         firePoint.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
@@ -118,6 +147,7 @@ public class Turret : MonoBehaviour, IDamageable, IVisitable
         Bullet bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
 
         bullet.Initialize(dir, bulletSpeed, bulletDamage);
+        CharacterAudio.instance.PlayShotSound();
     }
 
     // ======================
@@ -133,6 +163,7 @@ public class Turret : MonoBehaviour, IDamageable, IVisitable
     void Death()
     {
         isDead = true;
+        CharacterAudio.instance.PlayDieSound();
         Destroy(gameObject);
     }
 
@@ -143,5 +174,11 @@ public class Turret : MonoBehaviour, IDamageable, IVisitable
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, detectRadius);
+    }
+
+    public void RecordUpgrade(string upgradeText)
+    {
+        if (string.IsNullOrWhiteSpace(upgradeText)) return;
+        upgrades.Add(upgradeText);
     }
 }

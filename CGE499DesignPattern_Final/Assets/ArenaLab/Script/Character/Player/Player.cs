@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class Player : MonoBehaviour,IDamageable,IVisitable
 {
@@ -34,16 +36,27 @@ public class Player : MonoBehaviour,IDamageable,IVisitable
         get => damage;
         set => damage = value;
     }
-    public float MoveSpeed
-    {
-        get => walkspeed;
-        set => walkspeed = value;
-    }
     public float MaxHealth
     {
         get => maxHealth;
-        set => maxHealth = value;
+        set
+        {
+            float previous = maxHealth;
+            maxHealth = value;
+
+            if (hs != null && value > previous)
+            {
+                hs.IncreaseMaxHealth(value - previous);
+            }
+        }
     }
+    public Movement Mv => mv;
+    public HealthSystem Hs => hs;
+    public float CurrentHealth => hs != null ? hs.CurrentHP : maxHealth;
+    public float MovementSpeed => mv != null ? mv.Speed : walkspeed;
+    public IReadOnlyList<string> Upgrades => upgrades;
+
+    private readonly List<string> upgrades = new();
 
     void Awake()
     {
@@ -51,7 +64,7 @@ public class Player : MonoBehaviour,IDamageable,IVisitable
         hs = new (maxHealth);
         mv = new (rb,walkspeed);
 
-        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        mainCam = GetComponentInChildren<Camera>();
     }
     void OnEnable()
     {
@@ -88,6 +101,7 @@ public class Player : MonoBehaviour,IDamageable,IVisitable
         Vector2 dir = new Vector2(horizontal,vertical).normalized;
 
         mv.Move(dir);
+        
     }
 
     void Aim()
@@ -106,6 +120,7 @@ public class Player : MonoBehaviour,IDamageable,IVisitable
         // ทำให้ปืนหันไปทางเมาส์
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         aim.rotation = Quaternion.Euler(0f, 0f, angle);
+        
     }
 
     void Shoot()
@@ -125,6 +140,7 @@ public class Player : MonoBehaviour,IDamageable,IVisitable
             
             Bullet bullet = Instantiate(bulletPrefab,aim.position,Quaternion.identity);
             bullet.Initialize(dir,bulletSpeed,damage);
+            CharacterAudio.instance.PlayShotSound();
         }
     }
 
@@ -136,8 +152,16 @@ public class Player : MonoBehaviour,IDamageable,IVisitable
 
     void Death()
     {
-        gameObject.SetActive(false);
         mv.Stop();
+        Camera.main.transform.SetParent(null);
+        CharacterAudio.instance.PlayDieSound();
+        gameObject.SetActive(false);
         isDeath = true;
+    }
+
+    public void RecordUpgrade(string upgradeText)
+    {
+        if (string.IsNullOrWhiteSpace(upgradeText)) return;
+        upgrades.Add(upgradeText);
     }
 }
