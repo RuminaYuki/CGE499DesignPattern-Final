@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class UIGameManager : MonoBehaviour
 {
@@ -67,5 +68,10 @@ public class UIGameManager : MonoBehaviour
             canvasGroup.SetActive(true);
             GameOverOrWin.text = "GameWin";
         }
+    }
+
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene(1);
     }
 }

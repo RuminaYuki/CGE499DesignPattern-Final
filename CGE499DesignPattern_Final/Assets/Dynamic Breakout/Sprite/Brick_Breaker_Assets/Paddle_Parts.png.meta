@@ -1,0 +1,360 @@
+fileFormatVersion: 2
+guid: 57914e38fcb184c42ae9c43535ded4e3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4707734356320092710
+    second: Paddle_Parts_0
+  - first:
+      213: 4163691474097547603
+    second: Paddle_Parts_1
+  - first:
+      213: 8573142675107371620
+    second: Paddle_Parts_2
+  - first:
+      213: -3496607763610920691
+    second: Paddle_Parts_3
+  - first:
+      213: -3569535064573067736
+    second: Paddle_Parts_4
+  - first:
+      213: 6748707150448952199
+    second: Paddle_Parts_5
+  - first:
+      213: 2008116362723452046
+    second: Paddle_Parts_6
+  - first:
+      213: 7639011866518341118
+    second: Paddle_Parts_7
+  - first:
+      213: -4441702309728584159
+    second: Paddle_Parts_8
+  - first:
+      213: -5738240989238338795
+    second: Paddle_Parts_9
+  - first:
+      213: -3305267078155810603
+    second: Paddle_Parts_10
+  - first:
+      213: 8218542942107190364
+    second: Paddle_Parts_11
+  - first:
+      213: -8088334073371606779
+    second: Paddle_Parts_12
+  - first:
+      213: -2010381922339529118
+    second: Paddle_Parts_13
+  - first:
+      213: 3489365917660238631
+    second: Paddle_Parts_14
+  - first:
+      213: 5770708593675822136
+    second: Paddle_Parts_15
+  - first:
+      213: 2580852709695709676
+    second: Paddle_Parts_16
+  - first:
+      213: -3172474006247660176
+    second: Paddle_Parts_17
+  - first:
+      213: 1203597586600261965
+    second: Paddle_Parts_18
+  - first:
+      213: 3005219238837840598
+    second: Paddle_Parts_19
+  - first:
+      213: -896848091331059146
+    second: Paddle_Parts_20
+  - first:
+      213: -4865638532892907805
+    second: Paddle_Parts_21
+  - first:
+      213: -1449738652719148966
+    second: Paddle_Parts_22
+  - first:
+      213: 5390857099944454697
+    second: Paddle_Parts_23
+  - first:
+      213: 1715015063715352976
+    second: Paddle_Parts_24
+  - first:
+      213: 3069168415262597577
+    second: Paddle_Parts_25
+  - first:
+      213: -3781263175267690577
+    second: Paddle_Parts_26
+  - first:
+      213: -8380762615104191706
+    second: Paddle_Parts_27
+  - first:
+      213: -4347575511501441899
+    second: Paddle_Parts_28
+  - first:
+      213: -8528222270944453443
+    second: Paddle_Parts_29
+  - first:
+      213: -3728051051425245368
+    second: Paddle_Parts_30
+  - first:
+      213: 8407420133534316152
+    second: Paddle_Parts_31
+  - first:
+      213: 2087674658178288828
+    second: Paddle_Parts_32
+  - first:
+      213: -6932603112756986377
+    second: Paddle_Parts_33
+  - first:
+      213: -2827718159569486744
+    second: Paddle_Parts_34
+  - first:
+      213: 2059742944776135669
+    second: Paddle_Parts_35
+  - first:
+      213: 3140053061319649215
+    second: Paddle_Parts_36
+  - first:
+      213: 3937609597772097073
+    second: Paddle_Parts_37
+  - first:
+      213: 7975565515715976844
+    second: Paddle_Parts_38
+  - first:
+      213: -6723182603371518265
+    second: Paddle_Parts_39
+  - first:
+      213: -7744565775778706932
+    second: Paddle_Parts_40
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Paddle_Red_Parts_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62347d30ecc81bb80800000000000000
+      internalID: -8380762615104191706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle_Red_Parts_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 17
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 594f4c25b1f4aa3c0800000000000000
+      internalID: -4347575511501441899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle_Red_Parts_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbcd7ce670ba5a980800000000000000
+      internalID: -8528222270944453443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 830b47180c180604d94162e62792ad68
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Paddle_Parts_0: 4707734356320092710
+      Paddle_Parts_1: 4163691474097547603
+      Paddle_Parts_10: -3305267078155810603
+      Paddle_Parts_11: 8218542942107190364
+      Paddle_Parts_12: -8088334073371606779
+      Paddle_Parts_13: -2010381922339529118
+      Paddle_Parts_14: 3489365917660238631
+      Paddle_Parts_15: 5770708593675822136
+      Paddle_Parts_16: 2580852709695709676
+      Paddle_Parts_17: -3172474006247660176
+      Paddle_Parts_18: 1203597586600261965
+      Paddle_Parts_19: 3005219238837840598
+      Paddle_Parts_2: 8573142675107371620
+      Paddle_Parts_20: -896848091331059146
+      Paddle_Parts_21: -4865638532892907805
+      Paddle_Parts_22: -1449738652719148966
+      Paddle_Parts_23: 5390857099944454697
+      Paddle_Parts_24: 1715015063715352976
+      Paddle_Parts_25: 3069168415262597577
+      Paddle_Parts_26: -3781263175267690577
+      Paddle_Parts_3: -3496607763610920691
+      Paddle_Parts_30: -3728051051425245368
+      Paddle_Parts_31: 8407420133534316152
+      Paddle_Parts_32: 2087674658178288828
+      Paddle_Parts_33: -6932603112756986377
+      Paddle_Parts_34: -2827718159569486744
+      Paddle_Parts_35: 2059742944776135669
+      Paddle_Parts_36: 3140053061319649215
+      Paddle_Parts_37: 3937609597772097073
+      Paddle_Parts_38: 7975565515715976844
+      Paddle_Parts_39: -6723182603371518265
+      Paddle_Parts_4: -3569535064573067736
+      Paddle_Parts_40: -7744565775778706932
+      Paddle_Parts_5: 6748707150448952199
+      Paddle_Parts_6: 2008116362723452046
+      Paddle_Parts_7: 7639011866518341118
+      Paddle_Parts_8: -4441702309728584159
+      Paddle_Parts_9: -5738240989238338795
+      Paddle_Red_Parts_1: -8380762615104191706
+      Paddle_Red_Parts_2: -4347575511501441899
+      Paddle_Red_Parts_3: -8528222270944453443
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

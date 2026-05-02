@@ -1,0 +1,375 @@
+fileFormatVersion: 2
+guid: 3d4231799b53357479d0eb5437f87e0d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7187556974626439306
+    second: paddles_and_balls_0
+  - first:
+      213: -8648940785515251040
+    second: paddles_and_balls_1
+  - first:
+      213: 3743475944472804664
+    second: paddles_and_balls_2
+  - first:
+      213: 7702363229941988218
+    second: paddles_and_balls_3
+  - first:
+      213: 6927277141986661920
+    second: paddles_and_balls_4
+  - first:
+      213: -5447416272166204531
+    second: paddles_and_balls_5
+  - first:
+      213: -3653289103029519212
+    second: paddles_and_balls_6
+  - first:
+      213: -6063165555285523499
+    second: paddles_and_balls_7
+  - first:
+      213: -492471056729896783
+    second: paddles_and_balls_8
+  - first:
+      213: 4068790620433721652
+    second: paddles_and_balls_9
+  - first:
+      213: 2004127382481628124
+    second: paddles_and_balls_10
+  - first:
+      213: -7996383784493285317
+    second: paddles_and_balls_11
+  - first:
+      213: 3746143471203951489
+    second: paddles_and_balls_12
+  - first:
+      213: 8078124390829596518
+    second: paddles_and_balls_13
+  - first:
+      213: -5189164322296802418
+    second: paddles_and_balls_14
+  - first:
+      213: -6577990441317031103
+    second: paddles_and_balls_15
+  - first:
+      213: 1382059907814417574
+    second: paddles_and_balls_16
+  - first:
+      213: 2494710641285450474
+    second: paddles_and_balls_17
+  - first:
+      213: -6650723632916995433
+    second: paddles_and_balls_18
+  - first:
+      213: -1104170415024211862
+    second: paddles_and_balls_19
+  - first:
+      213: -4153805646367104360
+    second: paddles_and_balls_20
+  - first:
+      213: 8457416756321278006
+    second: paddles_and_balls_21
+  - first:
+      213: 5868368885090643820
+    second: paddles_and_balls_22
+  - first:
+      213: -3816859589884042499
+    second: paddles_and_balls_23
+  - first:
+      213: -4808283263127967292
+    second: paddles_and_balls_24
+  - first:
+      213: -4492267208356009206
+    second: paddles_and_balls_25
+  - first:
+      213: 615594148166253404
+    second: paddles_and_balls_26
+  - first:
+      213: 7855631999147280143
+    second: paddles_and_balls_27
+  - first:
+      213: 4389884997196583190
+    second: paddles_and_balls_28
+  - first:
+      213: -5951337569957030264
+    second: paddles_and_balls_29
+  - first:
+      213: 3850350916997401335
+    second: paddles_and_balls_30
+  - first:
+      213: 4001392017189774135
+    second: paddles_and_balls_31
+  - first:
+      213: 5030454751586490831
+    second: paddles_and_balls_32
+  - first:
+      213: -3720027090353469417
+    second: paddles_and_balls_33
+  - first:
+      213: 2543843042719508950
+    second: paddles_and_balls_34
+  - first:
+      213: -2271049493805137810
+    second: paddles_and_balls_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: balls_orange_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f68c6b862a07150800000000000000
+      internalID: 5868368885090643820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddles_red_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 32
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae9010555847da4188fbf8909c52431
+      internalID: -1215549684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddles_red_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 32
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b1ff2810b2ca0419805b42fbe00f18
+      internalID: 1001106278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paddles_red_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 32
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3515f3a3aabc5a4793610de7bae873c
+      internalID: -1644503124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 78fd655f724dd9c4883087232926f40c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      balls_orange_3: 5868368885090643820
+      paddles_and_balls_0: -7187556974626439306
+      paddles_and_balls_1: -8648940785515251040
+      paddles_and_balls_10: 2004127382481628124
+      paddles_and_balls_11: -7996383784493285317
+      paddles_and_balls_12: 3746143471203951489
+      paddles_and_balls_13: 8078124390829596518
+      paddles_and_balls_14: -5189164322296802418
+      paddles_and_balls_15: -6577990441317031103
+      paddles_and_balls_16: 1382059907814417574
+      paddles_and_balls_17: 2494710641285450474
+      paddles_and_balls_18: -6650723632916995433
+      paddles_and_balls_19: -1104170415024211862
+      paddles_and_balls_2: 3743475944472804664
+      paddles_and_balls_20: -4153805646367104360
+      paddles_and_balls_21: 8457416756321278006
+      paddles_and_balls_23: -3816859589884042499
+      paddles_and_balls_24: -4808283263127967292
+      paddles_and_balls_25: -4492267208356009206
+      paddles_and_balls_26: 615594148166253404
+      paddles_and_balls_27: 7855631999147280143
+      paddles_and_balls_28: 4389884997196583190
+      paddles_and_balls_29: -5951337569957030264
+      paddles_and_balls_3: 7702363229941988218
+      paddles_and_balls_30: 3850350916997401335
+      paddles_and_balls_31: 4001392017189774135
+      paddles_and_balls_32: 5030454751586490831
+      paddles_and_balls_33: -3720027090353469417
+      paddles_and_balls_34: 2543843042719508950
+      paddles_and_balls_35: -2271049493805137810
+      paddles_and_balls_36: 590018614
+      paddles_and_balls_37: 1862353170
+      paddles_and_balls_38: -1735272923
+      paddles_and_balls_39: 1867461867
+      paddles_and_balls_4: 6927277141986661920
+      paddles_and_balls_40: -2114150042
+      paddles_and_balls_41: 843022750
+      paddles_and_balls_45: 1671537806
+      paddles_and_balls_46: -1244860449
+      paddles_and_balls_47: -1429884388
+      paddles_and_balls_48: 762014759
+      paddles_and_balls_5: -5447416272166204531
+      paddles_and_balls_6: -3653289103029519212
+      paddles_and_balls_7: -6063165555285523499
+      paddles_and_balls_8: -492471056729896783
+      paddles_and_balls_9: 4068790620433721652
+      paddles_red_1: -1215549684
+      paddles_red_2: 1001106278
+      paddles_red_3: -1644503124
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
