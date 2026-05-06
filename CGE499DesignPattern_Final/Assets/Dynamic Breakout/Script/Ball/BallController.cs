@@ -4,7 +4,7 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     [SerializeField] private float baseSpeed = 5f;
-    
+
     private float speed;
     [SerializeField] private int damage = 1;
     [SerializeField] private float paddleInfluence = 0.15f;
@@ -66,7 +66,18 @@ public class BallController : MonoBehaviour
             return;
         }
 
-        bounceStrategy = newStrategy;
+        SetStrategy((IBounceStrategy)newStrategy);
+    }
+
+    public void SetStrategy(IBounceStrategy strategy)
+    {
+        if (strategy == null)
+        {
+            Debug.LogWarning("Cannot set null bounce strategy.");
+            return;
+        }
+
+        bounceStrategy = strategy;
         speed = bounceStrategy.GetBaseSpeed();
 
         if (rb.linearVelocity.sqrMagnitude > 0.001f)
@@ -75,8 +86,18 @@ public class BallController : MonoBehaviour
         }
     }
 
+    public T GetStrategyComponent<T>() where T : MonoBehaviour, IBounceStrategy
+    {
+        return GetComponent<T>();
+    }
+
     void StartBallMove()
     {
+        if (speed <= 0f)
+        {
+            speed = baseSpeed;
+        }
+
         Vector2 direction = new Vector2(0, 1);
         rb.linearVelocity = direction.normalized * speed;
     }
